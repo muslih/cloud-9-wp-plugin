@@ -17,7 +17,28 @@ function cloud9_admin_actions(){
 
 function  cloud9_admin()
 {
-
+	?>
+	<div class="wrap">
+		<h4>A more interested hello world plugin </h4>
+		<table class="widefat">
+			<thead>
+				<tr>
+					<th>Post Title</th>
+					<th>Post Id</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>Post Title</th>
+					<th>Post Id</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				
+			</tbody>
+		</table>
+	</div>
+	<?php
 }
 
 ?>
