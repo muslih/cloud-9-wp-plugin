@@ -34,7 +34,29 @@ function  cloud9_admin()
 				</tr>
 			</tfoot>
 			<tbody>
-				
+<?php 
+	global $wpdb;
+
+	$mytestdrafts = $wpdb->get_results(
+		"
+		SELECT ID,post_title 
+		FROM $wpdb->posts 
+		WHERE post_status = 'draft'
+		"
+	);
+?>	
+<?php
+	foreach ($mytestdrafts as $mytestdraft) {
+?>
+	<tr>
+<?php
+	echo "<td>".$mytestdraft->post_title."</td>";
+	echo "<td>".$mytestdraft->ID."</td>";
+?>
+	</tr>
+<?php 
+	}
+?>
 			</tbody>
 		</table>
 	</div>
